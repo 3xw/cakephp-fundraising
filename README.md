@@ -13,4 +13,8 @@ Load it in your config/boostrap.php
 
 	Plugin::load('Trois/FR');
 
+Run the following command in the CakePHP console to create the tables using the Migrations plugin:
+
+	bin/cake Migrations migrate -p Trois/FR
+
 ## more to come
