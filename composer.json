@@ -11,12 +11,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Trois\\FR\\": "src"
+      "Trois\\Fundraising\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Trois\\FR\\Test\\": "tests",
+      "Trois\\Fundraising\\Test\\": "tests",
       "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
     }
   }
