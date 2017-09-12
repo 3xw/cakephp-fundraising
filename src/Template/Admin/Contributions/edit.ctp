@@ -14,11 +14,14 @@
             <!-- FORM -->
             <?= $this->Form->create($contribution); ?>
             <?php
-                              echo $this->Form->input('name', ['class' => 'form-control']);
-                                    echo $this->Form->input('amount', ['class' => 'form-control']);
-                                    echo $this->Form->input('description', ['class' => 'form-control']);
-                                    echo $this->Form->input('thanks', ['class' => 'form-control']);
-                              ?>
+            echo $this->Form->input('active', ['class' => 'form-control']);
+            echo $this->Form->input('highlight', ['class' => 'form-control']);
+            echo $this->Form->input('name', ['class' => 'form-control']);
+            echo $this->Form->input('amount', ['class' => 'form-control']);
+            echo $this->Form->input('description', ['class' => 'form-control']);
+            echo $this->Form->input('thanks', ['class' => 'form-control']);
+            echo $this->Form->input('order', ['class' => 'form-control']);
+            ?>
 
             <div class="btn-group">
               <?= $this->Html->link(__('Cancel'), $referer, ['class' => 'btn btn-sm btn-info btn-fill']) ?>
