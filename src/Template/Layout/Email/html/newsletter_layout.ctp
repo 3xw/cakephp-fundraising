@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
 	<meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-	<title>BON POUR LA TETE</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+	<title>xxx</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 	<!-- Web Font / @font-face : BEGIN -->
 	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
@@ -198,7 +198,7 @@ img.g-img + div {
 
 		<!-- Visually Hidden Preheader Text : BEGIN -->
 		<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
-			Bon pour la tête - notification
+			Description rapide de l'email
 		</div>
 		<!-- Visually Hidden Preheader Text : END -->
 
@@ -206,7 +206,7 @@ img.g-img + div {
 		<table role="presentation" aria-hidden="true" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
 			<tr>
 				<td style="padding: 20px 0; text-align: center">
-					<img src="https://bonpourlatete.com/img/header_email.png" aria-hidden="true" width="100%" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="header_img">
+					<img src="http://via.placeholder.com/600x150" aria-hidden="true" width="100%" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="header_img">
 				</td>
 			</tr>
 		</table>
@@ -216,9 +216,9 @@ img.g-img + div {
 		<table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
 			<tr>
 				<td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
-					Association Bon pour la tête<br>Av. de la gare 1 - 1003 Lausanne<br>
+					xxx<br>yyyy<br>
 					<br><br>
-					Pour vous désinscire ou modifier vos préférences aller dans <a href="https://bonpourlatete.com/me">Mon compte</a>
+					Pour vous désinscire cliquez <a href="#">ici</a>
 					<br><br>
 					powered by <a href="http://wgr.ch">WGR</a>
 				</td>

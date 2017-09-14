@@ -3,24 +3,18 @@
    <!-- Hero Image, Flush : BEGIN -->
    <tr>
    <td bgcolor="#ffffff">
-               <?= $this->Attachment->image(['image' => $this->Url->build('/', true).'img/BPLT_groupe Cristina_merci.jpg', 'width' => 600], ['class' => 'g-img','style'=>"width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" ]) ?>
+     <!-- Image -->
    </td>
    </tr>
    <!-- 1 Column Text + Button : BEGIN -->
    <tr>
      <td bgcolor="#ffffff" style="padding: 40px 40px 20px; text-align: center;">
-          <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 27px; color: #333333; font-weight: normal;">Merci <?= $donation->firstname." ".$donation->lastname?></h1>
+          <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 27px; color: #333333; font-weight: normal;">Merci <?= $donation->first_name." ".$donation->last_name?></h1>
      </td>
    </tr>
    <tr>
      <td bgcolor="#ffffff" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-          <p style="margin: 0;"><?= $this->Text->autoParagraph(h($donation->product->thanks))?></p>
-     </td>
-   </tr>
-   <!-- Clear Spacer : BEGIN -->
-   <tr>
-     <td height="40" style="font-size: 0; line-height: 0;">
-          &nbsp;
+          <p style="margin: 0;"><?= $this->Text->autoParagraph(h($donation->contribution->thanks))?></p>
      </td>
    </tr>
 
@@ -32,7 +26,7 @@
             <br>
             Montant: <b>CHF <?= $donation->amount?></b>
             <br>
-            De la part de: <?= $donation->firstname." ".$donation->lastname?>
+            De la part de: <?= $donation->first_name." ".$donation->last_name?>
             <br>
          </p>
       </td>

@@ -10,11 +10,11 @@
 
           <!-- HEADER -->
           <div class="header">
-              <h4 class="title">List of <?= __('Donations') ?></h4>
-              <p class="category">
-                <?=
-                $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')])
-                ?>
+            <h4 class="title">List of <?= __('Donations') ?></h4>
+            <p class="category">
+              <?=
+              $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')])
+              ?>
             </p>
           </div>
 
@@ -29,27 +29,27 @@
                     <table id="datatables" class="table table-striped table-no-bordered table-hover dataTable dtr-inline" cellspacing="0" width="100%" style="width: 100%;" role="grid" aria-describedby="datatables_info">
                       <thead>
                         <tr>
-                                                    <th><?= $this->Paginator->sort('id') ?></th>
-                                                    <th><?= $this->Paginator->sort('created') ?></th>
-                                                    <th><?= $this->Paginator->sort('modified') ?></th>
-                                                    <th><?= $this->Paginator->sort('anonymous') ?></th>
-                                                    <th><?= $this->Paginator->sort('first_name') ?></th>
-                                                    <th><?= $this->Paginator->sort('last_name') ?></th>
-                                                    <th><?= $this->Paginator->sort('email') ?></th>
-                                                    <th class="actions"><?= __('Actions') ?></th>
+                          <th><?= $this->Paginator->sort('id') ?></th>
+                          <th><?= $this->Paginator->sort('created') ?></th>
+                          <th><?= $this->Paginator->sort('modified') ?></th>
+                          <th><?= $this->Paginator->sort('anonymous') ?></th>
+                          <th><?= $this->Paginator->sort('first_name') ?></th>
+                          <th><?= $this->Paginator->sort('last_name') ?></th>
+                          <th><?= $this->Paginator->sort('email') ?></th>
+                          <th class="actions"><?= __('Actions') ?></th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php foreach ($donations as $donation): ?>
                           <tr>
-                                                      <td data-title="id"><?= $this->Number->format($donation->id) ?></td>
-                                                            <td data-title="created"><?= h($donation->created) ?></td>
-                                                            <td data-title="modified"><?= h($donation->modified) ?></td>
-                                                            <td data-title="anonymous"><?= h($donation->anonymous) ?></td>
-                                                            <td data-title="first_name"><?= h($donation->first_name) ?></td>
-                                                            <td data-title="last_name"><?= h($donation->last_name) ?></td>
-                                                            <td data-title="email"><?= h($donation->email) ?></td>
-                                                              <td data-title="actions" class="actions" class="text-right">
+                            <td data-title="id"><?= $this->Number->format($donation->id) ?></td>
+                            <td data-title="created"><?= h($donation->created) ?></td>
+                            <td data-title="modified"><?= h($donation->modified) ?></td>
+                            <td data-title="anonymous"><?= h($donation->anonymous) ?></td>
+                            <td data-title="first_name"><?= h($donation->first_name) ?></td>
+                            <td data-title="last_name"><?= h($donation->last_name) ?></td>
+                            <td data-title="email"><?= h($donation->email) ?></td>
+                            <td data-title="actions" class="actions" class="text-right">
                               <?= $this->Html->link('<i class="fa fa-eye"></i>', ['action' => 'view', $donation->id],['class' => 'btn btn-simple btn-info btn-icon edit','escape' => false]) ?>
                               <?= $this->Html->link('<i class="fa fa-edit"></i>', ['action' => 'edit', $donation->id], ['class' => 'btn btn-simple btn-warning btn-icon edit','escape' => false]) ?>
                               <?= $this->Form->postLink('<i class="fa fa-times"></i>', ['action' => 'delete', $donation->id], ['class' => 'btn btn-simple btn-danger btn-icon remove','escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', $donation->id)]) ?>

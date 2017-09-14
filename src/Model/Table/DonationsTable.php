@@ -113,9 +113,6 @@ class DonationsTable extends Table
         $validator
             ->allowEmpty('transaction_nb');
 
-        $validator
-            ->allowEmpty('donationscol');
-
         return $validator;
     }
 
@@ -128,7 +125,6 @@ class DonationsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['contribution_id'], 'Contributions'));
 
         return $rules;

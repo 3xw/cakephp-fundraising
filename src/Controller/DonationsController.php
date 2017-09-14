@@ -32,7 +32,7 @@ class DonationsController extends AppController
       ]);
 
       $charge = $this->Stripe->createChargeSimple(
-        $this->request->data['stripeToken'], $donation->amount * 100,  'chf', $donation->email
+        $this->request->data['stripeToken'], $donation->amount * 100,  'chf', "Donation n°.".$donation->id." - ".$donation->email
       );
 
       if($charge->id){
@@ -60,9 +60,12 @@ class DonationsController extends AppController
   }
 
   public function invoice($donation_id){
-
+    $this->_email_notification($donation_id);
   }
 
+  public function test(){
+    $this->_email_notification(8);
+  }
 
   private function _email_notification($donation_id){
     $donation = $this->Donations->get($donation_id,[
@@ -73,9 +76,12 @@ class DonationsController extends AppController
     $email->to($donation->email);
     $email->viewVars(['donation'=>$donation]);
     if($donation->payment_method == 'stripe'){
-      $email->template('thanks', 'default');
+      //$email->template('thanks', 'default');
+      $email->subject('Merci !');
+      $email->template('thanks', 'Trois/Fundraising.newsletter_layout');
     }else{
-      $email->template('invoice', 'default');
+      $email->subject('Information relative pour le paiement de votre don');
+      $email->template('invoice', 'Trois/Fundraising.newsletter_layout');
     }
     $email->send();
   }

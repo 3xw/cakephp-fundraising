@@ -1,13 +1,6 @@
 <!-- Email Body : BEGIN -->
 <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
 
-   <!-- Hero Image, Flush : BEGIN -->
-   <tr>
-      <td bgcolor="#ffffff">
-         <img src="https://bonpourlatete.com/img/merci.png" aria-hidden="true" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="g-img">
-
-      </td>
-   </tr>
    <!-- Hero Image, Flush : END -->
 
    <!-- 1 Column Text + Button : BEGIN -->
@@ -19,15 +12,15 @@
    <tr>
       <td bgcolor="#ffffff" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
          <p style="margin: 0;">
-            Pour: <b>Association Bon pour la tête</b>
+            Pour: <b>xxx</b>
             <br>
             Av. de la gare 1 - 1003 Lausanne
             <br>
             Banque Raiffeisen de Lavaux
             <br>
-            IBAN: <b>CH11 8045 4000 1019 5704 0</b>
+            IBAN: <b>CH11 xxxx xxx xxx xxxx</b>
             <br>
-            Ref: <b><?= $donation->email." - ".$donation->contribution->name?></b>
+            Ref: <b><?= $donation->id." - ".$donation->email?></b>
             <br>
             Montant: <b>CHF <?= $donation->amount?></b>
          </p>
