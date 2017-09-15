@@ -2,7 +2,7 @@
 namespace Trois\Fundraising\Controller;
 
 use Trois\Fundraising\Controller\AppController;
-use Cake\Mailer\Email;
+use Cake\Mailer\MailerAwareTrait;
 
 /**
 * Donations Controller
@@ -13,6 +13,7 @@ use Cake\Mailer\Email;
 */
 class DonationsController extends AppController
 {
+  use MailerAwareTrait;
 
   public function initialize()
   {
@@ -39,50 +40,19 @@ class DonationsController extends AppController
         $donation->transaction_nb = $charge->id;
         $donation->status = $charge->status;
         if($this->Donations->save($donation)){
-
           if ($this->request->data['confirm_email']) {
-            $this->_email_notification($donation->id);
+            $this->getMailer('Trois/Fundraising.User')->send('thanks', [$donation->email,__('Thanks for your contribution !'), $donation]);
           }
-
-          $this->Flash->success(__('Thanks for you doantion !.'));
-
+          $this->Flash->success(__('Thanks for you doantion !'));
           if ($this->request->data['success_url']) {
             $this->redirect($this->request->data['success_url']);
           }else{
             $this->redirect("/");
           }
-
         }
       }else{
         $this->Flash->error(__('Oops we\'ve got a problem!'));
       }
     }
-  }
-
-  public function invoice($donation_id){
-    $this->_email_notification($donation_id);
-  }
-
-  public function test(){
-    $this->_email_notification(8);
-  }
-
-  private function _email_notification($donation_id){
-    $donation = $this->Donations->get($donation_id,[
-      'contain'=>['Contributions']
-    ]);
-    $email = new Email();
-    $email->emailFormat('html');
-    $email->to($donation->email);
-    $email->viewVars(['donation'=>$donation]);
-    if($donation->payment_method == 'stripe'){
-      //$email->template('thanks', 'default');
-      $email->subject('Merci !');
-      $email->template('thanks', 'Trois/Fundraising.newsletter_layout');
-    }else{
-      $email->subject('Information relative pour le paiement de votre don');
-      $email->template('invoice', 'Trois/Fundraising.newsletter_layout');
-    }
-    $email->send();
   }
 }
