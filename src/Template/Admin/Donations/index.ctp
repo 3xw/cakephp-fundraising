@@ -42,7 +42,7 @@
                       <tbody>
                         <?php foreach ($donations as $donation): ?>
                           <tr>
-                            <td data-title="id"><?= $this->Number->format($donation->id) ?></td>
+                            <td data-title="id"><?= h($donation->id) ?></td>
                             <td data-title="created"><?= h($donation->created) ?></td>
                             <td data-title="modified"><?= h($donation->modified) ?></td>
                             <td data-title="anonymous"><?= h($donation->anonymous) ?></td>

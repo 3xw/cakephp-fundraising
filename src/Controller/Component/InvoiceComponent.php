@@ -23,16 +23,11 @@ class InvoiceComponent extends Component
   {
     parent::initialize($config);
   }
-
-
   public function generatePdfInvoice($donation_id){
     //to to
   }
-
-
   public function sendInvoice($donation){
     //$this->loadModel('Donations');
     $this->getMailer('Trois/Fundraising.User')->send('invoice', [$donation->email,'Information de paiement', $donation]);
   }
-
 }

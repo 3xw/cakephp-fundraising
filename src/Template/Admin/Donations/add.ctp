@@ -26,7 +26,7 @@
             echo $this->Form->input('currency', ['class' => 'form-control']);
             echo $this->Form->input('status', ['class' => 'form-control', 'type'=>'select', 'options'=>['pending'=>'pending','succeeded'=>'succeeded']]);
             echo $this->Form->input('payment_method', ['class' => 'form-control', 'type'=>'select', 'options'=>['invoice'=>'Virement bancaire','stripe'=>'Carte de crédit']]);
-
+            echo $this->Form->input('bank_account', ['class' => 'form-control']);
             echo $this->Form->input('transaction_nb', ['class' => 'form-control']);
             echo $this->Form->input('contribution_id', ['options' => $contributions, 'class' => 'form-control']);
             ?>
