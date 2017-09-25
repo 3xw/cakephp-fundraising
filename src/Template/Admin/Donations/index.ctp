@@ -30,11 +30,10 @@
                       <thead>
                         <tr>
                           <th><?= $this->Paginator->sort('id') ?></th>
-                          <th><?= $this->Paginator->sort('created') ?></th>
-                          <th><?= $this->Paginator->sort('modified') ?></th>
-                          <th><?= $this->Paginator->sort('anonymous') ?></th>
                           <th><?= $this->Paginator->sort('first_name') ?></th>
                           <th><?= $this->Paginator->sort('last_name') ?></th>
+                          <th><?= $this->Paginator->sort('payment_method') ?></th>
+                          <th><?= $this->Paginator->sort('amount') ?></th>
                           <th><?= $this->Paginator->sort('email') ?></th>
                           <th class="actions"><?= __('Actions') ?></th>
                         </tr>
@@ -43,11 +42,10 @@
                         <?php foreach ($donations as $donation): ?>
                           <tr>
                             <td data-title="id"><?= h($donation->id) ?></td>
-                            <td data-title="created"><?= h($donation->created) ?></td>
-                            <td data-title="modified"><?= h($donation->modified) ?></td>
-                            <td data-title="anonymous"><?= h($donation->anonymous) ?></td>
                             <td data-title="first_name"><?= h($donation->first_name) ?></td>
                             <td data-title="last_name"><?= h($donation->last_name) ?></td>
+                            <td data-title="payment_method"><?= h($donation->payment_method) ?></td>
+                            <td data-title="amount"><?= h($donation->amount) ?></td>
                             <td data-title="email"><?= h($donation->email) ?></td>
                             <td data-title="actions" class="actions" class="text-right">
                               <?= $this->Html->link('<i class="fa fa-eye"></i>', ['action' => 'view', $donation->id],['class' => 'btn btn-simple btn-info btn-icon edit','escape' => false]) ?>

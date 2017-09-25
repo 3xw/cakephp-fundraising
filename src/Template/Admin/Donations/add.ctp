@@ -15,6 +15,7 @@
             <?= $this->Form->create($donation); ?>
             <?php
             echo $this->Form->input('anonymous', ['class' => 'form-control']);
+            echo $this->Form->input('company', ['class' => 'form-control']);
             echo $this->Form->input('first_name', ['class' => 'form-control']);
             echo $this->Form->input('last_name', ['class' => 'form-control']);
             echo $this->Form->input('email', ['class' => 'form-control']);
