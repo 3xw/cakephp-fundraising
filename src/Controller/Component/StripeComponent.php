@@ -19,8 +19,8 @@ class StripeComponent extends Component
    public function initialize(array $config)
    {
       parent::initialize($config);
-      Stripe::setApiKey(Configure::read('Stripe.dev.secret'));
-      $this->public_key = Configure::read('Stripe.dev.public');
+      Stripe::setApiKey(Configure::read('Stripe.secret'));
+      $this->public_key = Configure::read('Stripe.public');
    }
 
    /**events**/

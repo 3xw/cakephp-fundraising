@@ -34,6 +34,7 @@
                           <th><?= $this->Paginator->sort('last_name') ?></th>
                           <th><?= $this->Paginator->sort('payment_method') ?></th>
                           <th><?= $this->Paginator->sort('amount') ?></th>
+                          <th><?= $this->Paginator->sort('status') ?></th>
                           <th><?= $this->Paginator->sort('email') ?></th>
                           <th class="actions"><?= __('Actions') ?></th>
                         </tr>
@@ -46,6 +47,7 @@
                             <td data-title="last_name"><?= h($donation->last_name) ?></td>
                             <td data-title="payment_method"><?= h($donation->payment_method) ?></td>
                             <td data-title="amount"><?= h($donation->amount) ?></td>
+                            <td data-title="email"><?= h($donation->status) ?></td>
                             <td data-title="email"><?= h($donation->email) ?></td>
                             <td data-title="actions" class="actions" class="text-right">
                               <?= $this->Html->link('<i class="fa fa-eye"></i>', ['action' => 'view', $donation->id],['class' => 'btn btn-simple btn-info btn-icon edit','escape' => false]) ?>
